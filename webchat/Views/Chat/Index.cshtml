@@ -66,6 +66,13 @@
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"
     type="text/javascript"></script>
 
+<script type="text/javascript">
+        if (typeof jQuery.ui == 'undefined') {
+            console.log("ERROR, jQuery UI, not loaded from CDN!");
+            document.write(decodeURI("%3Cscript src='@Url.Content("~/Static/Js/lib/jquery-ui.min.js")' type='text/javascript'%3E%3C/script%3E"));
+        }
+</script>
+
 <script type="text/javascript" src="@Url.Content("~/Static/Js/lib/bootstrap.js")"></script>
 
 <script type="text/javascript" src="@Url.Content("~/Static/Js/lib/jquery.caret.min.js")"></script>
